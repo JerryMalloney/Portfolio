@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jerry Malloney</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="logo">
+                <p class="font-white-1">Jerry Malloney</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <div class="navbar-nav ml-auto">
+                <a class="font-white nav-item nav-link" href="#">About</a>
+                <a class="font-white nav-item nav-link" href="#">Projects</a>
+                <a class="font-white nav-item nav-link" href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--main-section-->
+    <div id="mainSection">
+        <div class="container main-text">
+            <h1 class="display-3 font-white-2">Front-end Web Developer.</h1>
+            <p class="font-white-2-p">Located in Venezuela, Valencia, Specializing in Web front-end technologies,
+             If you're a business seeking a web presence or an employer looking to hire, you can get in touch with me <a href="#contact">here.</a></p>
+             <button type="button" class="btn btn-success">
+                 <p class="btn-p">I need a Website <i class="fas fa-angle-right"></i>
+                 </p>
+             </button>
+             <button type="button" class="btn btn btn-success">
+                 <p class="btn-p">I'm looking to hire you <i class="fas fa-angle-right"></i>
+                 </p>
+             </button>
+            </div>
+    </div>
+    <!--Projects-section-->
+    <div class="Projects-bg-color">
+        <div class="container Projects-text">
+            <h1 class="text-center">PORTFOLIO</h1>
+            <p class="text-center">Below you can see some projects I've been working on lately.</p>
+            <p class="text-center">Coming soon</p>
+        </div>
+    </div>
+    <!--Contact-section-->
+    <!--google-api-->
+    <div id="map"></div>
+    <!--form-->
+    <div class="container padding-">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-2 text-center form">
+                <img src="img/img-perfil.jpg" alt="" id="img-perfil">
+                <br>
+                <span class="badge badge-success">+52 (902) 719 7079</span>
+                <div>
+                    <i class="fab fa-github"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-7 form">
+                <form>
+                    <div class="form-group">
+                        <label for="firstname">Name</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="Projects-bg-color">
+        <div class="container">
+            <p class="text-center text-muted" id="footer-text">Jerry Malloney 2018</p>
+        </div>
+    </div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 10.1725745, lng: -68.0642644};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 6,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzFxB2S5XqFtcgfPWXEAPoHzhyr9CAk0A&callback=initMap"
+    async defer></script>
+</body>
+</html>
